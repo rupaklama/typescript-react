@@ -35,7 +35,7 @@ const logger = (message: string): void => {
 
 // never function 
 // anytime we throw error, function will technically not actually return anything so
-// to indicate that or to do so add ': never' type annotation to not to return anything ever
+// to indicate that or to do so add ': never' type annotation to NOT to return anything ever
 const throwError = (message: string): never => {
   throw new Error(message)
 }

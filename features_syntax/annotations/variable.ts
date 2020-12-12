@@ -54,8 +54,8 @@ const logNumber: (i: number) => void = (i: number) => {
 // 1. Must use annotation when a Function returns the 'Any Type' to clarify the value
 const json = '{"x": 10, "y": 20}'; // json data type
 
-// parse into object
-// coordinates variable returns value 'ANY TYPE' 
+// parsing above json data into object
+// coordinates variable returns value 'ANY TYPE' since JSON.parse returns value of 'ANY TYPE' 
 // 'ANY'- meaning no idea about the type & can be any random types like boolean, number, object
 // typescript don't know & JSON.parse returns value of 'ANY TYPE' 
 
@@ -72,7 +72,7 @@ let words = ['red', 'green', 'blue'];
 // When we declare a variable on one line then initialize it later, will return type - ANY
 // let foundWord; // type any
 
-// To fix above, declare & initialize variable on the same line or add Annotation
+// To fix above, declare & initialize variable on the same line OR add Annotation
 let foundWord: boolean; 
 
 for (let i = 0; i < words.length; i++) {
@@ -82,12 +82,12 @@ for (let i = 0; i < words.length; i++) {
 }
 
 // 3. when we want a variable to have a type that can't be inferred - no auto guessing
-// even declaration & initialization are on the same line. 
+// even having declaration & initialization are on the same line. 
 let numbers = [-10, -1, 12];
 
 // started with type inference & added Annotation to make it work
 // numberAboveZero value is going to be either Boolean or Number
-let numberAboveZero: boolean | number = false; // like or statement
+let numberAboveZero: boolean | number = false; // '|' or statement
 // NOTE: single variable's value referring to Two Different Types
 
 // to make it this code work, add Annotation above

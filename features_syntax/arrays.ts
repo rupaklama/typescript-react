@@ -3,10 +3,10 @@
 // if array is empty, must declare Type Annotation to prevent - Any
 const arr: string[] = [];
 
-// string array
+// string array with type inference
 const carMakers = ['ford', 'toyota', 'chevy'];
 
-// object array
+// object array with type inference
 const dates = [new Date(), new Date()];
 
 // two dimensional arrays
