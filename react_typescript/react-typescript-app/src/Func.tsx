@@ -5,13 +5,13 @@ import React from 'react'
 interface AppProps { // structure of our props
   // '?' rite next to key to make it optional property
   // so we can show our App either with or without - color prop
-  color?: string; 
+  color: string; // by default, prop is required
 }
 
 
 // functional component 
 // NOTE: Bad practice to rely on Type Inference with function component
-// instead use Type Annotation to return value
+// instead always use Type Annotation to return value
 const App = (props: AppProps): JSX.Element => { // returning jsx
   return (
     <div>
