@@ -10,11 +10,15 @@ const add = (a: number, b: number) => { // args & return value
   return a + b;
 };
 
-// NOTE: Always use ': number' - function value return annotation to prevent bugs/errors
+// NOTE: Always use '(): number' - function value return annotation to prevent bugs/errors
 const subtract = (a: number, b: number): number => {
   return a - b;
 };
 
+// Another way to make function
+// func return type value - number with arrow instead of :
+type MyFunc = (a: number, b: number) => number; 
+const sum2: MyFunc = (a, b) => a + b;
 
 // keyword function - regular function
 function divide(a: number, b: number): number {
@@ -22,7 +26,7 @@ function divide(a: number, b: number): number {
 }
 
 // anonymous function / function expression
-const multiply = function(a: number, b: number): number {
+const multiply = (a: number, b: number): number => {
   return a * b;
 }
 
@@ -33,7 +37,7 @@ const logger = (message: string): void => {
   // return 'abdfd';  // this is an error
 };
 
-// never function 
+// Note: NEVER function 
 // anytime we throw error, function will technically not actually return anything so
 // to indicate that or to do so add ': never' type annotation to NOT to return anything ever
 const throwError = (message: string): never => {

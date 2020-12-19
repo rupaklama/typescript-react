@@ -62,8 +62,12 @@ function printAnyThing<T>(arr: T[]): void {
   }
 }
 
-// function returning array of strings
-printAnyThing<string>(['a', 'b', 'c']) // string[] - avoid this, not correct way
+// Using above Generic Function to create Array of strings or Array of numbers
 
+// Array of strings
+printAnyThing<string>(['a', 'b', 'c']) // string[] - avoid this, not correct way
 // type inference, same as above
 printAnyThing(['a', 'b', 'c'])
+
+// Array of numbers
+printAnyThing<number>([1, 2, 3]) 

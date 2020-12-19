@@ -7,6 +7,8 @@
 let apples: number = 5;
 
 // Type inference - no need of annotation here
+// declare & initialize variable on the same line for Type inference to work 
+// OR add Annotation if initializing on different line
 let apple = 5;
 
 let speed: string = 'fast';
@@ -16,7 +18,7 @@ let hasName: boolean = true;
 let nothingMuch: null = null;
 let nothing: undefined = undefined;
 
-// build in objects
+// built in objects
 let now: Date = new Date();
 
 // type of array that contain strings, array of strings
@@ -28,6 +30,7 @@ let myNumbers: number[] = [1, 3, 6, 7];
 // array of booleans
 let truths: boolean[] = [true, false, true];
 
+
 // Classes
 class Car {
   
@@ -37,15 +40,15 @@ let car: Car = new Car();
 
 // Object literal
 let point: { x: number; y: number } = {
-  x: 10,
+  x: 1,
   y: 20
 }
 
 // Function Variable Value
 // Inside annotation - what different args the function going to take & 
 // what different types of value that we expect function to return
-// (i: number) => void - number type as args & return type is void
-const logNumber: (i: number) => void = (i: number) => {
+// Annotation is here (i: number) => void - number type as args & return type is void
+const logNumber: (i:number) => void = (i: number) => {
   console.log(i)
 }
 
@@ -72,7 +75,7 @@ let words = ['red', 'green', 'blue'];
 // When we declare a variable on one line then initialize it later, will return type - ANY
 // let foundWord; // type any
 
-// To fix above, declare & initialize variable on the same line OR add Annotation
+// NOTE: To fix above, declare & initialize variable on the same line OR add Annotation
 let foundWord: boolean; 
 
 for (let i = 0; i < words.length; i++) {

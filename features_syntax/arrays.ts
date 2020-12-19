@@ -1,7 +1,8 @@
 
 // array
 // if array is empty, must declare Type Annotation to prevent - Any
-const arr: string[] = [];
+// Type inference won't work
+const emptyArray: string[] = [];
 
 // string array with type inference
 const carMakers = ['ford', 'toyota', 'chevy'];
@@ -14,7 +15,7 @@ const dates = [new Date(), new Date()];
 const carsByMake = [
   ['f150'], ['corolla'], ['camaro']
 ];
-// no values in array
+// no values in array, must provide Type annotation
 // const carsByMake: string[][] = [];
 
 
@@ -31,7 +32,7 @@ carMakers.push(10); // adding element that's not String
 // anytime we declare an array, we get lot of help from array build in functions like
 // map, forEach & reduce...
 carMakers.map((car: string): string => { // func will return string
-  return car.toUpperCase();
+  return car.toUpperCase(); // additional methods on car.
 })
 
 // Flexible types

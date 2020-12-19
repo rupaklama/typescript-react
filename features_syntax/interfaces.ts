@@ -1,11 +1,11 @@
 // To fix issue with Long Type Annotations, we are going to create Interface inside this file.
 // Defining interface 'Vehicle' with our CUSTOM TYPE, starts with Capital letter
-interface Vehicle { // generic name 
+interface Vehicle { // very generic name 
   name: string;
   year: Date;
   broken: boolean
   // method
-  summary(): string; // description of car
+  summary(): string; // returns a string - description of car
 }
 
 // car object
@@ -41,3 +41,24 @@ printVehicle(oldCivic);
 // Interface is the 'CUSTOM Type' that we will define.
 
 // 'interface' is use to define structure of an object
+
+
+// Call Signature
+interface Sum {
+  // props & func return type value
+  (a: number, b: number): number;
+  prop1: string;
+}
+
+const sum: Sum = (a, b) => a + b;
+sum.prop1 = 'some prop';
+
+
+// extending interfaces
+interface Parent {
+  x: string;
+}
+// child interface inherits property x from parent above
+interface Child extends Parent {}
+
+let child: Child = {x: 'some props'};
