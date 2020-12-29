@@ -1,8 +1,8 @@
 import { Fragment, useState } from 'react';
 import './App.css';
 
-// using 'type alias' to avoid writing long event type in ()
-// which is just a name that represents another type
+// using 'type alias' to avoid writing long event type in (e:)
+// which is just a name that represents another type, similar to variable but for type
 type FormEvent = React.FormEvent<HTMLFormElement>;
 
 // object interface - interface creates a New Custom Type that describes
@@ -38,7 +38,7 @@ function App(): JSX.Element {
     setTodos(newTodos);
   };
 
-  console.log(todos);
+  // console.log(todos);
 
   const completedTodo = (index: number): void => {
     const newTodos: ITodo[] = [...todos];
